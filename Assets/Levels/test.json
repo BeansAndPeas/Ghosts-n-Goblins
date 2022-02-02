@@ -1,0 +1,17 @@
+{
+    "placement": [
+        "            ",
+        "            ",
+        "            ",
+        "     %      ",
+        "GGGGGGGGGGGG",
+        "DDDDDDDDDDDD",
+        "DDDDDDDDDDDD"
+    ],
+
+    "keys": {
+        "%": "spawnpoint",
+        "G": "grass",
+        "D": "dirt"
+    }
+}
