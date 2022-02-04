@@ -235,7 +235,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94875172f24711a46a9dbdc2cb2af1e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tilePrefab: {fileID: 1079535476616694597, guid: 2669065d5ccb8774a942737955cc3255, type: 3}
+  tilePrefab: {fileID: 8949799411240435046, guid: ef6bff8411bd4584f88ad7cbd17b2b42, type: 3}
 --- !u!4 &969631501
 Transform:
   m_ObjectHideFlags: 0

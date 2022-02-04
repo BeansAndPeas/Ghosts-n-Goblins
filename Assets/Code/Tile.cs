@@ -5,4 +5,8 @@ public class Tile {
     public Tile(string name) {
         this.name = name;
     }
+
+    public bool IsAir() {
+        return this.name.ToLower().Equals("air");
+    }
 }

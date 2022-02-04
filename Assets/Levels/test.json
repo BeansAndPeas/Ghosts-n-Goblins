@@ -1,17 +1,39 @@
 {
     "placement": [
-        "            ",
-        "            ",
-        "            ",
-        "     %      ",
-        "GGGGGGGGGGGG",
-        "DDDDDDDDDDDD",
-        "DDDDDDDDDDDD"
+        ".                                      h      .",
+        ".                                     FgFFFFFq.",
+        ".                                    GGGGGGGGl.",
+        "GG                                  CRWRWRWRWL.",
+        "RRc                                CRkKkKkKkKL.",
+        "rTRc  h                    h      CRrrTrTrTrTL.",
+        "twtwcFgFFFFFgFFHFFFFFFFFFFjgFFFFFHwtwtwtwtwtwL.",
+        "GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG.",
+        "dddddddddddddddddddddddddddddddddddddddddddddd.",
+        "DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD."
     ],
 
     "keys": {
-        "%": "spawnpoint",
         "G": "grass",
-        "D": "dirt"
+        "R": "rock_2",
+        "c": "cliff_edge_1",
+        "r": "rock_1",
+        "T": "rock_4",
+        "t": "rock_0",
+        "w": "rock_3",
+        "W": "rock_5",
+        "F": "iron_fence",
+        "g": "gravestone_1_bottom",
+        "h": "gravestone_1_top",
+        "H": "gravestone_0",
+        "j": "gravestone_2",
+        "d": "dirt_grass",
+        "D": "dirt",
+        "C": "cliff_edge",
+        "k": "rock_8",
+        "K": "rock_9",
+        "L": "ladder",
+        "l": "ladder_grass",
+        "q": "top_grass",
+        ".": "air"
     }
 }
