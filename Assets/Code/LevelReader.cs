@@ -52,7 +52,7 @@ public class LevelReader : MonoBehaviour {
 
                 foreach (string key in keys) {
                     string realKey = key;
-                    if(Char.IsWhiteSpace(key.ToCharArray()[0])) realKey = " ";
+                    if (Char.IsWhiteSpace(key.ToCharArray()[0])) realKey = " ";
                     if (!keysObjs.Keys.Contains(realKey))
                         throw new InvalidOperationException("Missing key: '" + realKey + "' in level: '" + levelName + "'");
                     string tileName;
@@ -67,10 +67,10 @@ public class LevelReader : MonoBehaviour {
                     foreach (string x in y.ToCharArray().Select(c => c.ToString())) {
                         Tile tile;
                         if (tileKeys.TryGetValue(x, out tile)) {
-                            if(!tile.IsAir()) {
+                            if (!tile.IsAir()) {
                                 GameObject tileObj = GameObject.Instantiate(this.tilePrefab);
                                 Vector3 position = tileObj.transform.position;
-                                tileObj.name = tile.name;
+                                tileObj.name = tile.GetName();
                                 position.x = xPos * tileObj.transform.localScale.x * .16f;
                                 position.y = yPos * tileObj.transform.localScale.y * .16f;
                                 tileObj.transform.position = position;
