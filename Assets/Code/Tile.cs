@@ -4,11 +4,9 @@ public class Tile {
     private readonly string name;
     private readonly bool noCollide;
 
-    public Tile(string name, bool noCollide) {
-        this.name = name;
-    }
-    public Tile(string name) {
-        this(name, false);
+    private Tile(Builder builder) {
+        this.name = builder.name;
+        this.noCollide = !builder.canCollide;
     }
 
     public bool IsAir() {
@@ -19,11 +17,25 @@ public class Tile {
         return !this.noCollide;
     }
 
-    public string GetName(bool lowercase) {
+    public string GetName(bool lowercase = false) {
         return lowercase ? this.name.ToLower() : this.name;
     }
 
-    public string GetName() {
-        return GetName(false);
+    public class Builder {
+        internal readonly string name;
+        internal bool canCollide = true;
+
+        public Builder(string name) {
+            this.name = name;
+        }
+
+        public Builder DisableCollision() {
+            this.canCollide = false;
+            return this;
+        }
+
+        public Tile Build() {
+            return new Tile(this);
+        }
     }
 }
