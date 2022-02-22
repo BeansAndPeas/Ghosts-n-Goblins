@@ -2,14 +2,35 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class Joystick : MonoBehaviour {
+public class Controller : MonoBehaviour {
     [SerializeField]
     private Transform player, innerCircle, outerCircle;
     [SerializeField]
     private float speed = 5f;
+    [SerializeField]
+    private Sprite normalSprite, attackSprite;
+    [SerializeField]
+    private Button attackButton;
+
     private bool touched = false;
     private Vector2 pointA, pointB;
+
+    private SpriteRenderer spriteRenderer;
+
+    private void Start() {
+        this.spriteRenderer = player.GetComponent<SpriteRenderer>();
+        this.attackButton.onClick.AddListener(() => StartCoroutine(OnAttack));
+    }
+
+    private IEnumerator OnAttack() {
+        this.attackButton.SetActive(false);
+        this.spriteRenderer.sprite = this.attackSprite;
+        yield return new WaitForSeconds(1.5f);
+        this.spriteRenderer.sprite = this.normalSprite;
+        this.attackButton.SetActive(true);
+    }
 
     private void Update() {
         if (Input.GetMouseButtonDown(0)) {
